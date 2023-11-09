@@ -1,0 +1,22 @@
+.main{
+    width:100%;
+}
+
+.menu{
+    text-align: center;
+}
+
+.content{
+    margin-top: 150px;
+}
+
+.list{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(80, 80, 255);
+    font-size: 30px;
+}

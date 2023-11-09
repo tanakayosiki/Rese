@@ -1,0 +1,24 @@
+.header_icon{
+    margin:50px 50px
+}
+
+.menu_button {
+    background-color: rgb(80, 80, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid rgb(80, 80, 255);
+    box-shadow: 1px 1px 3px black;
+    position: relative;
+}
+
+.menu_button-mark{
+    color:white;
+    font-size: 40px;
+    font-weight: lighter;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}

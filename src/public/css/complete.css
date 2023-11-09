@@ -1,0 +1,35 @@
+.main{
+    width:100%;
+    background-color: #fafafa;
+}
+
+.container{
+    width:500px;
+    height:300px;
+    background-color: white;
+    border:1px solid white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgb(145, 145, 145);
+    margin:0 auto;
+}
+
+.message{
+    text-align: center;
+    margin:70px 0;
+}
+
+.content{
+    font-size: 25px;
+}
+
+.move_page{
+    text-align: center;
+}
+
+.move_button{
+    padding:10px 15px;
+    background-color: rgb(80, 80, 255);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
