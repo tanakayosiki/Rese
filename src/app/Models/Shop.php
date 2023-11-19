@@ -11,11 +11,15 @@ class Shop extends Model
 
     protected $fillable=['prefecture_id','genre_id','name','img','detail'];
 
-    public function prefectures(){
+    public function prefecture(){
         return $this->belongsTo('App\Models\Prefecture');
     }
 
-    public function genres(){
+    public function genre(){
         return $this->belongsTo('App\Models\Genre');
+    }
+
+    public function reservations(){
+        return $this->hasMany('App\Models\Reservation');
     }
 }

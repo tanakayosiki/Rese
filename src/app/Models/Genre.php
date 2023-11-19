@@ -12,6 +12,6 @@ class Genre extends Model
     protected $fillable=['name'];
 
     public function shops(){
-        return $this->hasMany('App\Models\shop');
+        return $this->hasMany('App\Models\Shop');
     }
 }
