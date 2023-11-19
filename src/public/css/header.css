@@ -1,3 +1,7 @@
+body{
+    background-color: #fafafa;
+}
+
 .header{
     width:100%;
     display: flex;
@@ -16,6 +20,7 @@
     border-radius: 3px;
     border: 1px solid rgb(80, 80, 255);
     box-shadow: 1px 1px 3px black;
+    cursor: pointer;
 }
 
 .menu_button-bar{

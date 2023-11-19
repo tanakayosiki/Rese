@@ -1,0 +1,171 @@
+body {
+    background-color: #fafafa;
+    width:100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+
+.icon_title{
+    display: flex;
+    align-items: center;
+}
+
+.header_icon {
+    margin-right: 30px;
+}
+
+.menu_button {
+    background-color: rgb(80, 80, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid rgb(80, 80, 255);
+    box-shadow: 1px 1px 3px black;
+}
+
+.menu_button-bar {
+    margin: 7px 0;
+}
+
+.menu_button-bar:nth-of-type(1) {
+    border: 1px solid white;
+    width: 12px;
+}
+
+.menu_button-bar:nth-of-type(2) {
+    border: 1px solid white;
+    width: 25px;
+}
+
+.menu_button-bar:nth-of-type(3) {
+    border: 1px solid white;
+    width: 5px;
+}
+
+.title {
+    color: rgb(80, 80, 255);
+}
+
+.main{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: top;
+    margin:0 auto;
+}
+
+.left_screen{
+    width:45%;
+}
+
+.shop_name{
+    display: flex;
+    align-items: center;
+}
+
+.back_page{
+    text-decoration: none;
+    color:black;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px black;
+    width:40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.name{
+    margin-left: 30px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.shop_img img{
+    width:100%;
+}
+
+.shop_tag{
+    display: flex;
+}
+
+.prefecture_tag{
+    margin-right: 10px;
+}
+
+.right_screen{
+    width:45%;
+    background-color: rgb(80, 80, 255);
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px black;
+    position: relative;
+}
+
+.reservation{
+    padding: 15px;
+}
+
+.content{
+    margin: 0;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.reservation_content{
+    margin: 10px 0;
+}
+
+.date{
+    border:none;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    padding:5px;
+}
+
+.reservation_select{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.select{
+    width: 100%;
+    border:none;
+    border-radius: 3px;
+    padding:5px;
+}
+
+.reservation_confirm{
+    width: 100%;
+    background-color: rgb(100, 100, 255);
+    padding: 15px;
+}
+
+th{
+    text-align: left;
+    color: white;
+}
+
+td{
+    color: white;
+    padding-left: 30px;
+}
+
+.button{
+    width:100%;
+    padding: 20px 0;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    bottom:0;
+}
+

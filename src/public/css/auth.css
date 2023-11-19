@@ -1,0 +1,64 @@
+.main {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.container{
+    width:300px;
+    margin:50px auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px black;
+}
+
+.container_header{
+    background-color: rgb(80, 80, 255);
+    width:100%;
+    border-radius: 3px 3px 0 0;
+}
+
+.header_name{
+    color: white;
+    padding: 10px;
+    margin:0;
+}
+
+.content{
+    width:100%;
+
+}
+
+.form{
+    padding: 5px 15px;
+    width:100%;
+    background-color: white;
+    border-radius: 0 0 3px 3px;
+}
+
+.input{
+    width:100%;
+    margin: 5px 0;
+}
+
+input{
+    width:80%;
+    border:none;
+    border-bottom: 1px solid black;
+}
+
+input:focus{
+    outline:none;
+}
+
+.button{
+    text-align: right;
+    margin-top: 10px;
+}
+
+.submit{
+    background-color: rgb(80, 80, 255);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+

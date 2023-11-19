@@ -1,3 +1,7 @@
+body{
+    background-color: #fafafa;
+}
+
 .header_icon{
     margin:50px 50px
 }
@@ -9,16 +13,17 @@
     border-radius: 3px;
     border: 1px solid rgb(80, 80, 255);
     box-shadow: 1px 1px 3px black;
+    display: block;
     position: relative;
+    text-decoration: none;
 }
 
 .menu_button-mark{
     color:white;
     font-size: 40px;
-    font-weight: lighter;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
+    position: absolute;
 }
