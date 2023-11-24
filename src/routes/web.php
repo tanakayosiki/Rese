@@ -1,8 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\NiceController;
+use App\Http\Controllers\MyPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +19,25 @@ use App\Http\Controllers\MenuController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',[ShopController::class,'index']);
+Route::middleware('auth')->group(function () {
+    Route::get('/menu',[MenuController::class,'menu']);
+    Route::get('/detail/{id}',[ReservationController::class,'detail'])->name('detail');
+    Route::post('/reservation/{id}',[ReservationController::class,'reservation'])->name('reservation');
+    Route::get('/done',[ReservationController::class,'done']);
+    Route::get('/nice/{shop}',[NiceController::class,'nice'])->name('nice');
+    Route::get('/unnice/{id}',[NiceController::class,'unNice'])->name('unnice');
+    Route::get('/delete/{id}',[MyPageController::class,'delete'])->name('delete');
+    Route::get('/mypage',[MyPageController::class,'index']);
+    Route::get('/mypage/{id}',[MyPageController::class,'cancel'])->name('cancel');
 });
-Route::get('/done',[ReservationController::class,'done']);
-Route::get('/menu1',[MenuController::class,'member']);
-Route::get('/menu2',[MenuController::class,'nonMember']);
+Route::get('/login',[AuthController::class,'getLogin'])->name('login');
+Route::post('/login',[AuthController::class,'postLogin']);
+Route::get('/register', [AuthController::class,'getRegister']);
+Route::post('/register', [AuthController::class,'postRegister']);
+Route::get('/menu',[MenuController::class,'menu']);
+Route::get('/thanks',[AuthController::class,'thanks']);
+Route::get('/logout',[AuthController::class,'getLogout']);
+Route::get('/search',[ShopController::class,'search']);
+
+
