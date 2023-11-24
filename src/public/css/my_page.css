@@ -1,0 +1,195 @@
+body {
+    background-color: #fafafa;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.header_icon {
+    margin-right: 30px;
+}
+
+.menu_button {
+    background-color: rgb(80, 80, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid rgb(80, 80, 255);
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
+}
+
+.menu_button-bar {
+    margin: 7px 0;
+}
+
+.menu_button-bar:nth-of-type(1) {
+    border: 1px solid white;
+    width: 12px;
+}
+
+.menu_button-bar:nth-of-type(2) {
+    border: 1px solid white;
+    width: 25px;
+}
+
+.menu_button-bar:nth-of-type(3) {
+    border: 1px solid white;
+    width: 5px;
+}
+
+.title {
+    color: rgb(80, 80, 255);
+}
+
+.main{
+    width: 100%;
+}
+
+
+.my_page{
+    width:100%;
+}
+
+.user{
+    width:100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.content{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.reservations{
+    width: 30%;
+    margin:0 auto;
+}
+
+.reservation_confirm {
+    width:100%;
+    background-color: rgb(100, 100, 255);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+th {
+    text-align: left;
+    color: white;
+}
+
+td {
+    color: white;
+    padding-left: 30px;
+}
+
+.nices{
+    width: 60%;
+}
+
+.shop {
+    width: 45%;
+    height: 300px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 3px;
+}
+
+
+.shop_all {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.shop_img {
+    height: 50%;
+}
+
+.shop_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.shop_tag {
+    display: flex;
+}
+
+.prefecture_tag,
+.genre_tag {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.shop_content {
+    padding: 10px;
+    height: 50%;
+    background-color: white;
+}
+
+.shop_name {
+    margin: 0;
+    font-size: 25px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.detail_button {
+    background-color: rgb(80, 80, 255);
+    border-radius: 3px;
+    padding: 5px 15px;
+}
+
+.detail_link {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 50%;
+    height: 80%;
+    background: rgb(255, 0, 0);
+    border-radius: 25px 25px 0 0;
+    display: block;
+    position: absolute;
+}
+
+.heart::before {
+    transform: rotate(-45deg);
+    left: 14%;
+}
+
+.heart::after {
+    transform: rotate(45deg);
+    right: 14%;
+}
+

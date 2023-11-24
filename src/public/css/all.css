@@ -150,7 +150,32 @@ input:focus{
     font-size: 15px;
 }
 
+.off_heart {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
 
+.off_heart::before,
+.off_heart::after {
+    content: "";
+    width: 50%;
+    height: 80%;
+    background:lightgrey;
+    border-radius: 25px 25px 0 0;
+    display: block;
+    position: absolute;
+}
+
+.off_heart::before {
+    transform: rotate(-45deg);
+    left: 14%;
+}
+
+.off_heart::after {
+    transform: rotate(45deg);
+    right: 14%;
+}
 
 .heart {
     width: 30px;
@@ -163,7 +188,7 @@ input:focus{
     content: "";
     width: 50%;
     height: 80%;
-    background:lightgrey;
+    background: rgb(255, 0, 0);
     border-radius: 25px 25px 0 0;
     display: block;
     position: absolute;
