@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/delete/{id}',[MyPageController::class,'delete'])->name('delete');
     Route::get('/mypage',[MyPageController::class,'index']);
     Route::get('/mypage/{id}',[MyPageController::class,'cancel'])->name('cancel');
+    Route::get('/logout',[AuthController::class,'getLogout']);
 });
 Route::get('/login',[AuthController::class,'getLogin'])->name('login');
 Route::post('/login',[AuthController::class,'postLogin']);
@@ -37,7 +38,7 @@ Route::get('/register', [AuthController::class,'getRegister']);
 Route::post('/register', [AuthController::class,'postRegister']);
 Route::get('/menu',[MenuController::class,'menu']);
 Route::get('/thanks',[AuthController::class,'thanks']);
-Route::get('/logout',[AuthController::class,'getLogout']);
+
 Route::get('/search',[ShopController::class,'search']);
 
 
