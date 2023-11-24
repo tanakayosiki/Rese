@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header_icon">
-        <button class="menu_button">
+        <a class="menu_button" href="{{url()->previous()}}">
             <p class="menu_button-mark">×</p>
-        </button>
+        </a>
     </div>
 </header>
