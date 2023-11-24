@@ -14,8 +14,4 @@ class MenuController extends Controller
         return view('menu2');
         }
     }
-
-    public function back(){
-        return back();
-    }
 }
