@@ -43,6 +43,10 @@ class User extends Authenticatable
     ];
 
     public function reservations(){
-        return $this->hasMany('App\Models\User');
+        return $this->hasMany('App\Models\Reservation');
+    }
+
+    public function nices(){
+        return $this->hasMany('App\Models\Nice');
     }
 }
