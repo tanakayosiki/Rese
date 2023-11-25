@@ -32,9 +32,12 @@
             <div class="reservations">
                 @foreach($reservations as $reservation)
                 <div class="reservation_confirm">
-                    <header class="header">
-                        <p class="header_title">予約</p>
-                        <a class="cancel" href="{{route('cancel',$reservation->id)}}">×</a>
+                    <header class="content_header">
+                        <div class="clock_img">
+                            <img src="{{asset('img/clock.png')}}">
+                        </div>
+                        <p class="content_title">予約</p>
+                        <a class="cancel" href="{{route('cancel',$reservation->id)}}"></a>
                     </header>
                     <table class="reservation_table">
                         <tr>
