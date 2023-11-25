@@ -72,6 +72,55 @@ body {
     justify-content: space-around;
 }
 
+.content_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.clock_img{
+    width:10%;
+}
+
+.clock_img img{
+    width: 70%;
+}
+
+.content_title{
+    color: white;
+    margin:0 auto 0 0;
+}
+
+.cancel {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: rgb(80, 80, 255);
+}
+
+.cancel::before,
+.cancel::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 22px;
+    background: white;
+}
+
+.cancel::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cancel::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .reservations{
     width: 30%;
     margin:0 auto;
