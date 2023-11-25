@@ -29,7 +29,7 @@
             </header>
             <div class="shop">
                 <div class="shop_name">
-                    <a class="back_page" href="/"><</a>
+                    <a class="back_page" href="{{url()->previous()}}"><</a>
                     <p class="name">{{$shop['name']}}</p>
                 </div>
                 <div class="shop_img">

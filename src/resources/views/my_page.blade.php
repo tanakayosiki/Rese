@@ -72,7 +72,7 @@
                             </div>
                             <div class="button">
                             <div class="detail_button">
-                                <a class="detail_link" href="{{route('detail',$nice->id)}}">詳しくみる</a>
+                                <a class="detail_link" href="{{route('detail',$nice->shop->id)}}">詳しくみる</a>
                             </div>
                                 <a class="heart" href="{{route('delete',$nice->id)}}"></a>
                             </div>
