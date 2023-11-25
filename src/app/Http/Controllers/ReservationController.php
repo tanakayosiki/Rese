@@ -13,11 +13,6 @@ use App\Models\Reservation;
 
 class ReservationController extends Controller
 {
-    public function index(){
-        $shop=Shop::with('prefecture','genre')->get();
-        return view('shop_detail',compact('shop'));
-    }
-
     public function detail($id){
         $times=Time::all();
         $people=Person::all();
