@@ -40,6 +40,8 @@
                         <a class="cancel" href="{{route('cancel',$reservation->id)}}"></a>
                     </header>
                     <table class="reservation_table">
+                    <form class="form" action="{{route('update',$reservation->id)}}" method="post">
+                        @csrf
                         <tr>
                             <th class="confirm_title">Shop</th>
                             <td class="confirm_content">{{$reservation['shop']['name']}}</td>
@@ -47,15 +49,40 @@
                         <tr>
                             <th class="confirm_title">Date</th>
                             <td class="confirm_content">{{$reservation['date']}}</td>
+                            <td>
+                            <input class="select" type="date" name="date">
+                            </td>
                         </tr>
                         <tr>
                             <th class="confirm_title">Time</th>
                             <td class="confirm_content">{{$reservation->time->getTime()}}</td>
+                            <td>
+                            <select class="select" name="time_id">
+                            <option value=""></option>
+                            @foreach($times as $time)
+                            <option value="{{$time['id']}}">{{$time->getTime()}}</option>
+                            @endforeach
+                            </select>
+                            </td>
                         </tr>
                         <tr>
                             <th class="confirm_title">Number</th>
                             <td class="confirm_content">{{$reservation->person->getPerson()}}</td>
+                            <td>
+                            <select class="select" name="person_id">
+                            <option value=""></option>
+                            @foreach($people as $person)
+                            <option value="{{$person['id']}}">{{$person->getPerson()}}</option>
+                            @endforeach
+                            </select>
+                            </td>
                         </tr>
+                        <tr>
+                        <td>
+                        <button class="btn" type="submit">変更</button>
+                        </tr>
+                        </td>
+                    </form>
                     </table>
                 </div>
                 @endforeach

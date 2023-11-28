@@ -74,6 +74,16 @@
                         <a class="off_heart" href="{{route('nice',$shop)}}"></a>
                     @endif
                     </div>
+                    <div class="evaluation">
+                        <div class="score">
+                            <a class="star" href="">☆</a>
+                            <span class="total"></span>
+                        </div>
+                        <div class="comment">
+                            <a class="icon" href=""></a>
+                            <span class="total"></span>
+                        </div>
+                    </div>
                     </div>
                 </div>
                 @endforeach
