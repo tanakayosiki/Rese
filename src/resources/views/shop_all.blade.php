@@ -74,15 +74,13 @@
                         <a class="off_heart" href="{{route('nice',$shop)}}"></a>
                     @endif
                     </div>
-                    <div class="evaluation">
-                        <div class="score">
+                    <div class="review">
                             <a class="star" href="">☆</a>
-                            <span class="total"></span>
-                        </div>
-                        <div class="comment">
-                            <a class="icon" href=""></a>
-                            <span class="total"></span>
-                        </div>
+                            <span class="total">5.0</span>
+                                <a class="icon_img" href="">
+                                <img src="{{asset('img/comment.png')}}">
+                                </a>
+                            <span class="total">10</span>
                     </div>
                     </div>
                 </div>

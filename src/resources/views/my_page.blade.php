@@ -106,6 +106,14 @@
                             </div>
                                 <a class="heart" href="{{route('delete',$nice->id)}}"></a>
                             </div>
+                            <div class="review">
+                            <a class="star" href="">☆</a>
+                            <span class="total">5.0</span>
+                                <a class="icon_img" href="">
+                                <img src="{{asset('img/comment.png')}}">
+                                </a>
+                            <span class="total">10</span>
+                    </div>
                             </div>
                         </div>
                         @endforeach
