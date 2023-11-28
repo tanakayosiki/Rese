@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/mypage',[MyPageController::class,'index']);
     Route::get('/mypage/{id}',[MyPageController::class,'cancel'])->name('cancel');
     Route::get('/logout',[AuthController::class,'getLogout']);
+    Route::post('/mypage/update/{id}',[MyPageController::class,'update'])->name('update');
 });
 Route::get('/login',[AuthController::class,'getLogin'])->name('login');
 Route::post('/login',[AuthController::class,'postLogin']);
