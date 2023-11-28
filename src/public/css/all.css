@@ -96,7 +96,6 @@ input:focus{
 
 .shop{
     width:24%;
-    height:300px;
     margin:15px 0;
     box-shadow: 1px 1px 3px #cccccc;
     border-radius: 3px;
@@ -134,7 +133,7 @@ input:focus{
 
 .shop_name{
     margin: 0;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .button{
@@ -210,6 +209,19 @@ input:focus{
     right: 14%;
 }
 
-.evaluation{
-    margin
+.review{
+    margin-top:10px;
 }
+
+.star{
+    text-decoration: none;
+}
+
+.icon_img{
+    text-decoration: none;
+}
+
+.icon_img img{
+    width:20px;
+}
+
