@@ -9,6 +9,7 @@ body {
     margin: 0 50px;
 }
 
+
 .header_icon {
     margin-right: 30px;
 }
@@ -74,9 +75,9 @@ body {
 
 .content_header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom:15px;
 }
 
 .clock_img{
@@ -122,8 +123,8 @@ body {
 }
 
 .reservations{
-    width: 30%;
-    margin:0 auto;
+    width: 50%;
+    margin-left:30px;
 }
 
 .reservation_confirm {
@@ -134,6 +135,10 @@ body {
     border-radius: 3px;
 }
 
+table{
+    width:100%;
+}
+
 th {
     text-align: left;
     color: white;
@@ -141,29 +146,28 @@ th {
 
 td {
     color: white;
-    padding-left: 30px;
 }
 
 .nices{
     width: 60%;
+    margin-right: 30px;
 }
 
 .shop {
-    width: 45%;
+    width:45%;
     height: 300px;
-    margin-bottom: 15px;
+    margin:0 0 15px 15px;
     box-shadow: 1px 1px 3px #cccccc;
     border-radius: 3px;
 }
 
 
 .shop_all {
-    width: 80%;
+    width: 90%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin-left:50px
 }
 
 .shop_img {

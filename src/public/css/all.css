@@ -3,7 +3,7 @@
 }
 
 .header {
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,7 +86,7 @@ input:focus{
 }
 
 .detail_form{
-    width:80%;
+    width:90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,6 +124,12 @@ input:focus{
     padding:10px;
     height:50%;
     background-color: white;
+}
+
+.content_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .shop_name{
@@ -202,4 +208,8 @@ input:focus{
 .heart::after {
     transform: rotate(45deg);
     right: 14%;
+}
+
+.evaluation{
+    margin
 }
