@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ReservationRequest;
 use App\Models\Shop;
 use App\Models\Prefecture;
 use App\Models\Genre;
@@ -10,6 +11,7 @@ use App\Models\Time;
 use App\Models\Person;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Reservation;
+use Carbon\Carbon;
 
 class ReservationController extends Controller
 {
@@ -17,10 +19,11 @@ class ReservationController extends Controller
         $times=Time::all();
         $people=Person::all();
         $shop=Shop::find($id);
-        return view('shop_detail',compact('shop','times','people'));
+        $today=new Carbon();
+        return view('shop_detail',compact('shop','times','people','today'));
     }
 
-    public function reservation(Request $request){
+    public function reservation(ReservationRequest $request){
         $user=Auth::user();
         $item=$request->all();
         $time=$item["time_id"];
