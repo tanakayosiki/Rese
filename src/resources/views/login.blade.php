@@ -8,6 +8,7 @@
     <div class="content">
         <form class="form" action="/login" method="post">
             @csrf
+            <p class="error">{{session('message')}}</p>
             <div class="input">
                 <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 512 512" style="width: 30px; height: 30px; opacity: 1;" xml:space="preserve">
                 <style type="text/css">
@@ -21,6 +22,9 @@
                 </g>
                 </svg>
                 <input type="email" name="email" placeholder="Email" value="{{old('email')}}">
+                @error('email')
+                <p class="error">{{$errors->first('email')}}
+                @enderror
             </div>
             <div class="input">
                 <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 30px; height: 30px; opacity: 1;" xml:space="preserve">
@@ -38,6 +42,9 @@
                 </g>
                 </svg>
                 <input class="password" type="password" name="password" placeholder="Password">
+                @error('password')
+                <p class="error">{{$errors->first('password')}}
+                @enderror
             </div>
             <div class="button">
                 <button class="submit" type="submit">ログイン</button>

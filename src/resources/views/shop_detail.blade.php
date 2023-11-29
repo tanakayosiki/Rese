@@ -29,7 +29,7 @@
             </header>
             <div class="shop">
                 <div class="shop_name">
-                    <a class="back_page" href="{{url()->previous()}}"><</a>
+                    <a class="back_page" href="/"><</a>
                     <p class="name">{{$shop['name']}}</p>
                 </div>
                 <div class="shop_img">
@@ -53,21 +53,32 @@
                     @csrf
                 <div class="reservation_content">
                     <div class="reservation_date">
-                        <input class="date" type="date" name="date">
+                        <input class="date" type="date" name="date" min="{{$today}}">
+                        @error('date')
+                        <p class="error">{{$errors->first('date')}}
+                @enderror
                     </div>
                 <div class="reservation_select">
                     <select class="select" name="time_id">
+                        <option Value=""></option>
                         @foreach($times as $time)
                         <option value="{{$time['id']}}">{{$time->getTime()}}</option>
                         @endforeach
                     </select>
+                    @error('time_id')
+                <p class="error">{{$errors->first('time_id')}}
+                @enderror
                 </div>
                 <div class="reservation_select">
                     <select class="select" name="person_id">
+                        <option Value=""></option>
                         @foreach($people as $person)
                         <option value="{{$person['id']}}">{{$person->getPerson()}}</option>
                         @endforeach
                     </select>
+                    @error('person_id')
+                    <p class="error">{{$errors->first('person_id')}}
+                    @enderror
                 </div>
                 </div>
                 <div class="reservation_confirm">
