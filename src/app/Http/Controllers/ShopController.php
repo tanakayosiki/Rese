@@ -9,7 +9,7 @@ use App\Models\Genre;
 use App\Models\Nice;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use DB;
+use App\Models\Review;
 
 class ShopController extends Controller
 {
@@ -17,7 +17,8 @@ class ShopController extends Controller
         $user=Auth::user();
         $prefectures=Prefecture::all();
         $genres=Genre::all();
-        $shops=Shop::with('prefecture','genre')->get();
+        $review=Review::all();
+        $shops=Shop::with('prefecture','genre','reviews')->get();
         return view('shop_all',compact('prefectures','genres','shops','user'));
     }
 

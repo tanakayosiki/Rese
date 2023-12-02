@@ -16,7 +16,7 @@ class MyPageController extends Controller
     public function index(Shop $shop){
         $user=Auth::user();
         $reservations=Reservation::with('shop','time','person')->get();
-        $nices=Nice::with('shop.prefecture','shop.genre','shop','user')->get();
+        $nices=Nice::where('user_id',$user->id)->get();
         $people=Person::all();
         $times=Time::all();
         return view('my_page',compact('reservations','nices','user','people','times'));
