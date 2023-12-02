@@ -7,6 +7,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\NiceController;
 use App\Http\Controllers\MyPageController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/mypage/{id}',[MyPageController::class,'cancel'])->name('cancel');
     Route::get('/logout',[AuthController::class,'getLogout']);
     Route::post('/mypage/update/{id}',[MyPageController::class,'update'])->name('update');
+    Route::get('/review/{id}',[ReviewController::class,'review'])->name('review');
+    Route::get('/evaluation/{id}',[ReviewController::class,'evaluation'])->name('evaluation');
+    Route::post('/evaluation',[ReviewController::class,'postEvaluation']);
 });
 Route::get('/login',[AuthController::class,'getLogin'])->name('login');
 Route::post('/login',[AuthController::class,'postLogin']);
