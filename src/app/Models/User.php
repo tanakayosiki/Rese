@@ -49,4 +49,8 @@ class User extends Authenticatable
     public function nices(){
         return $this->hasMany('App\Models\Nice');
     }
+
+    public function reviews(){
+        return $this->hasMany('App\Models\review');
+    }
 }
