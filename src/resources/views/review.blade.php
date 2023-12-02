@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,28 @@
     </div>
     </header>
     <main class="main">
-        
+        <header class="review_header">レビュー一覧</header>
+        <div class="review">
+            @foreach($reviews as $review)
+            <table class="review_list">
+                <tr>
+                    <th class="label">ユーザー名</th>
+                    <td class="name">{{$review['user']['name']}}</td>
+                </tr>
+                <tr>
+                    <th class="label">評価点</label>
+                    <td class="score">{{$review->getStar()}}</td>
+                </tr>
+                <tr>
+                    <th class="label">コメント</th>
+                    <td class="comment">{{$review['comment']}}</td>
+                </tr>
+            </table>
+            @endforeach
+        </div>
+        <div class="move">
+            <a class="post_page" href="{{route('evaluation',$shop->id)}}">投稿ページへ</a>
+        </div>
     </main>
 
 </body>

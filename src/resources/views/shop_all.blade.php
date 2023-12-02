@@ -75,12 +75,20 @@
                     @endif
                     </div>
                     <div class="review">
-                            <a class="star" href="">☆</a>
-                            <span class="total">5.0</span>
-                                <a class="icon_img" href="">
+                            <span class="star">☆</span>
+                            @if($shop->reviews->avg('star'))
+                            <span class="total">{{$shop->reviews->avg('star')}}</span>
+                            @else
+                            <span class="total">0</span>
+                            @endif
+                                <a class="icon_img" href="{{route('review',$shop->id)}}">
                                 <img src="{{asset('img/comment.png')}}">
                                 </a>
-                            <span class="total">10</span>
+                                @if($shop->reviews->count())
+                            <span class="total">{{$shop->reviews->count()}}件</span>
+                            @else
+                            <span class="total">0件</span>
+                            @endif
                     </div>
                     </div>
                 </div>
