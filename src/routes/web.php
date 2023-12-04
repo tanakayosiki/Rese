@@ -8,6 +8,9 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\NiceController;
 use App\Http\Controllers\MyPageController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\Auth\EmailVerificationNotificationController;
+use App\Http\Controllers\Auth\EmailVerificationPromptController;
+use App\Http\Controllers\Auth\VerifyEmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +24,7 @@ use App\Http\Controllers\ReviewController;
 */
 
 Route::get('/',[ShopController::class,'index']);
-Route::middleware('auth')->group(function () {
+Route::middleware('verified')->group(function () {
     Route::get('/menu',[MenuController::class,'menu']);
     Route::get('/detail/{id}',[ReservationController::class,'detail'])->name('detail');
     Route::post('/reservation/{id}',[ReservationController::class,'reservation'])->name('reservation');
@@ -43,7 +46,16 @@ Route::get('/register', [AuthController::class,'getRegister']);
 Route::post('/register', [AuthController::class,'postRegister']);
 Route::get('/menu',[MenuController::class,'menu']);
 Route::get('/thanks',[AuthController::class,'thanks']);
-
 Route::get('/search',[ShopController::class,'search']);
+Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
+                ->name('verification.notice');
+
+    Route::get('verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
+                ->middleware(['signed', 'throttle:6,1'])
+                ->name('verification.verify');
+
+    Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
+                ->middleware('throttle:6,1')
+                ->name('verification.send');
 
 
