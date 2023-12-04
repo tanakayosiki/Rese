@@ -1,0 +1,27 @@
+body {
+    background-color: #fafafa;
+    width: 100%;
+}
+
+.main{
+    width: 80%;
+    margin:0 auto;
+}
+
+.verify-email{
+    width: 50%;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px black;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.resend{
+    background-color: rgb(80, 80, 255);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
