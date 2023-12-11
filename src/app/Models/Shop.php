@@ -32,6 +32,10 @@ class Shop extends Model
       return $this->hasMany('App\Models\Review');
     }
 
+    public function users(){
+      return $this->belongsToMany('App\Models\User')->withTimestamps();;
+    }
+
     public function is_liked_by_auth_user()
   {
     $id = Auth::id();
