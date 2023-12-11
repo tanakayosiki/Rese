@@ -107,7 +107,6 @@
                                 <a class="heart" href="{{route('delete',$nice->id)}}"></a>
                             </div>
                             <div class="review">
-                            
                             <span class="star">☆</span>
                             @if($nice->shop->reviews->avg('star'))
                             <span class="total">{{$nice->shop->reviews->avg('star')}}</span>

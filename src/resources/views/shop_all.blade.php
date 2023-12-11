@@ -52,6 +52,7 @@
             </div>
         </header>
         <div class="shop_all">
+            <p class="message">{{session('message')}}</p>
             <form class="detail_form">
                 @foreach($shops as $shop)
                 <div class="shop">
@@ -93,6 +94,13 @@
                     </div>
                 </div>
                 @endforeach
+            </form>
+        </div>
+        <div class="auth_page">
+            <a class="admin_link" href="/admin">管理ページへ</a>
+            <form class="manager_form" action="{{route('index')}}" method="get">
+                <button class="manager_link" type="submit">代表者ページへ</button>
+                <input type="hidden" name="id" id="id" value="{{optional($user)->id}}">
             </form>
         </div>
     </main>
