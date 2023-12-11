@@ -3,7 +3,7 @@
 }
 
 .header {
-    width: 90%;
+    width:90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,7 +86,7 @@ input:focus{
 }
 
 .detail_form{
-    width:90%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -225,3 +225,38 @@ input:focus{
     width:20px;
 }
 
+.auth_page {
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.admin_link {
+    text-decoration: none;
+    background-color: rgb(80, 80, 255);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.manager_link {
+    text-decoration: none;
+    background-color: rgb(255, 80, 80);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.message{
+    color: red;
+    text-align: center;
+    margin: 0 auto;
+}

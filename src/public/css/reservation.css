@@ -1,0 +1,80 @@
+body {
+    background-color: #fafafa;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.header_icon {
+    margin-right: 30px;
+}
+
+.menu_button {
+    background-color: rgb(80, 80, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid rgb(80, 80, 255);
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
+}
+
+.menu_button-bar {
+    margin: 7px 0;
+}
+
+.menu_button-bar:nth-of-type(1) {
+    border: 1px solid white;
+    width: 12px;
+}
+
+.menu_button-bar:nth-of-type(2) {
+    border: 1px solid white;
+    width: 25px;
+}
+
+.menu_button-bar:nth-of-type(3) {
+    border: 1px solid white;
+    width: 5px;
+}
+
+.title {
+    color: rgb(80, 80, 255);
+}
+
+.main{
+    width:80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.reservation{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(80, 80, 255);
+    color: white;
+    border-radius: 3px;
+}
+
+.shop_date{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shop_time{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shop_people{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

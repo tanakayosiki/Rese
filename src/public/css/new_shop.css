@@ -1,0 +1,118 @@
+body {
+    background-color: #fafafa;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.header_icon {
+    margin-right: 30px;
+}
+
+.menu_button {
+    background-color: rgb(80, 80, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid rgb(80, 80, 255);
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
+}
+
+.menu_button-bar {
+    margin: 7px 0;
+}
+
+.menu_button-bar:nth-of-type(1) {
+    border: 1px solid white;
+    width: 12px;
+}
+
+.menu_button-bar:nth-of-type(2) {
+    border: 1px solid white;
+    width: 25px;
+}
+
+.menu_button-bar:nth-of-type(3) {
+    border: 1px solid white;
+    width: 5px;
+}
+
+.title {
+    color: rgb(80, 80, 255);
+}
+
+.content_header{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+.new_shop{
+    width: 80%;
+    text-align: center;
+        margin: 0 auto;
+}
+
+.sign_up{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.shop_name{
+    display: flex;
+    align-items: center;
+}
+
+.item{
+    margin-right: 50px;
+}
+
+.prefecture{
+    display: flex;
+    align-items: center;
+}
+
+.genre{
+    display: flex;
+    align-items: center;
+}
+
+.shop_img{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.img{
+    width: 300px;
+    height:200px;
+    resize: none;
+    padding: 5px;
+}
+
+.detail{
+    display: flex;
+}
+
+.textarea{
+    width: 300px;
+    height: 500px;
+    resize: none;
+    padding: 5px;
+}
+
+.submit{
+    margin:30px 0;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(80, 80, 255);
+    font-size: 16px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
