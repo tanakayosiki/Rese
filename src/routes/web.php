@@ -11,6 +11,8 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ManagerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +26,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 */
 
 Route::get('/',[ShopController::class,'index']);
-Route::middleware('verified')->group(function () {
+Route::middleware('auth')->group(function () {
     Route::get('/menu',[MenuController::class,'menu']);
     Route::get('/detail/{id}',[ReservationController::class,'detail'])->name('detail');
     Route::post('/reservation/{id}',[ReservationController::class,'reservation'])->name('reservation');
@@ -39,6 +41,21 @@ Route::middleware('verified')->group(function () {
     Route::get('/review/{id}',[ReviewController::class,'review'])->name('review');
     Route::get('/evaluation/{id}',[ReviewController::class,'evaluation'])->name('evaluation');
     Route::post('/evaluation',[ReviewController::class,'postEvaluation']);
+
+    Route::middleware(['AdminMiddleware'])->group(function(){
+    Route::get('/admin',[AdminController::class,'index']);
+    Route::get('/admin/select',[AdminController::class,'select']);
+    Route::put('/admin/{id}/select',[AdminController::class,'postSelect'])->name('select');
+    });
+
+    Route::middleware(['ManagerMiddleware'])->group(function(){
+    Route::get('/manager',[ManagerController::class,'index'])->name('index');
+    Route::get('/manager/new_shop/{id}',[ManagerController::class,'newShop'])->name('newShop');
+    Route::post('/manager/new_shop/{id}',[ManagerController::class,'postNewShop'])->name('postNewShop');
+    Route::get('/manager/update/{id}',[ManagerController::class,'update'])->name('update');
+    });
+    Route::post('/manager/update/{id}',[ManagerController::class,'postUpdate'])->name('postUpdate');
+    Route::get('/manager/reservation/{id}',[ManagerController::class,'reservation'])->name('reservation_confirm');
 });
 Route::get('/login',[AuthController::class,'getLogin'])->name('login');
 Route::post('/login',[AuthController::class,'postLogin']);
@@ -49,13 +66,15 @@ Route::get('/thanks',[AuthController::class,'thanks']);
 Route::get('/search',[ShopController::class,'search']);
 Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
                 ->name('verification.notice');
-
-    Route::get('verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
+Route::get('verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
                 ->middleware(['signed', 'throttle:6,1'])
                 ->name('verification.verify');
-
-    Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
+Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
                 ->middleware('throttle:6,1')
                 ->name('verification.send');
+
+
+Route::put('/admin/{id}/attach', [AdminController::class,'attach'])->name('attach');
+Route::put('/admin/{id}/detach', [AdminController::class,'detach'])->name('detach');
 
 
