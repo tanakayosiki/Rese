@@ -12,6 +12,9 @@ use App\Models\Person;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Reservation;
 use Carbon\Carbon;
+use Image;
+use File;
+
 
 class ReservationController extends Controller
 {
@@ -42,5 +45,14 @@ class ReservationController extends Controller
 
     public function done(){
         return view('done');
+    }
+
+    public function imgStore(Request $request,$id){
+        $shop=Shop::find($id);
+        $img=$shop['img'];
+        $fileName=new Carbon().'.jpg';
+        $filePath=storage_path('app/public'.$fileName);
+        Image::make($img)->save($filePath);
+        return back()->with('message','保存しました');
     }
 }
