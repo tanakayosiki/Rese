@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/detail/{id}',[ReservationController::class,'detail'])->name('detail');
     Route::post('/reservation/{id}',[ReservationController::class,'reservation'])->name('reservation');
     Route::get('/done',[ReservationController::class,'done']);
+    Route::post('/detail/img_store/{id}',[ReservationController::class,'imgStore'])->name('imgStore');
     Route::get('/nice/{shop}',[NiceController::class,'nice'])->name('nice');
     Route::get('/unnice/{id}',[NiceController::class,'unNice'])->name('unnice');
     Route::get('/delete/{id}',[MyPageController::class,'delete'])->name('delete');
