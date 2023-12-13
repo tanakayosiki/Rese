@@ -173,3 +173,16 @@ td{
     color: yellow;
 }
 
+.img_button{
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(80, 80, 255);
+    color: white;
+    padding: 3px;
+    margin-top: 5px;
+}
+
+.message{
+    color: red;
+    margin: 0;
+}
