@@ -27,6 +27,7 @@
                     </div>
                 </div>
             </header>
+            <p class="message">{{session('message')}}</p>
             <div class="shop">
                 <div class="shop_name">
                     <a class="back_page" href="/"><</a>
@@ -35,6 +36,11 @@
                 <div class="shop_img">
                     <img src="{{$shop['img']}}">
                 </div>
+                <form class="img_post" action="{{route('imgStore',$shop->id)}}" method="post" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="id" value="{{$shop->id}}">
+                <button class="img_button" type="submit">画像を保存する</button>
+                </form>
                 <div class="shop_tag">
                     <p class="prefecture_tag">#{{$shop['prefecture']['name']}}</p>
                     <p class="genre_tag">#{{$shop['genre']['name']}}</p>
