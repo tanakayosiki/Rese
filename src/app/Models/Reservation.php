@@ -16,7 +16,7 @@ class Reservation extends Model
     }
 
     public function user(){
-        return $this->belongsTo('App\Models\Reservation');
+        return $this->belongsTo('App\Models\User');
     }
 
     public function time(){
