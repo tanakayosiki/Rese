@@ -13,6 +13,8 @@ use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ManagerController;
+use App\Http\Controllers\MailController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/mypage',[MyPageController::class,'index']);
     Route::get('/mypage/{id}',[MyPageController::class,'cancel'])->name('cancel');
     Route::get('/logout',[AuthController::class,'getLogout']);
-    Route::post('/mypage/update/{id}',[MyPageController::class,'update'])->name('update');
+    Route::post('/mypage/update/{id}',[MyPageController::class,'update'])->name('myPageUpdate');
     Route::get('/review/{id}',[ReviewController::class,'review'])->name('review');
     Route::get('/evaluation/{id}',[ReviewController::class,'evaluation'])->name('evaluation');
     Route::post('/evaluation',[ReviewController::class,'postEvaluation']);
@@ -47,6 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin',[AdminController::class,'index']);
     Route::get('/admin/select',[AdminController::class,'select']);
     Route::put('/admin/{id}/select',[AdminController::class,'postSelect'])->name('select');
+    Route::get('/admin/mail',[MailController::class,'send']);
     });
 
     Route::middleware(['ManagerMiddleware'])->group(function(){

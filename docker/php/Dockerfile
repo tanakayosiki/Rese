@@ -20,6 +20,9 @@ RUN apt-get update \
                 --with-freetype=/usr/include/ \
                 --with-jpeg=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd
+RUN curl -sS https://getcomposer.org/installer | php \
+&& mv composer.phar /usr/local/bin/composer \
+&& composer self-update
 
 
 

@@ -24,9 +24,7 @@
     </div>
     </header>
     <div class="admin">
-        <header class="admin_header">
-            管理者ページ
-        </header>
+        <p class="message">{{session('message')}}</p>
         <div class="content">
             <h1 class="content_header">代表者選択</h1>
             <div class="user_list">
@@ -53,6 +51,9 @@
         </div>
         <div class="shop_select">
             <a class="link" href="/admin/select">店舗先選択へ</a>
+        </div>
+        <div class="mail">
+            <a class="send" href="/admin/mail">メール送信</a>
         </div>
     </div>
 </body>
