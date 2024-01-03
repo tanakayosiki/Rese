@@ -30,17 +30,17 @@
         </div>
         <div class="content">
             <div class="reservations">
-                @foreach($reservations as $reservation)
+                <?php $i=1; foreach($reservations as $reservation):?>
                 <div class="reservation_confirm">
                     <header class="content_header">
                         <div class="clock_img">
                             <img src="{{asset('img/clock.png')}}">
                         </div>
-                        <p class="content_title">予約</p>
+                        <p class="content_title">予約<?=$i?></p>
                         <a class="cancel" href="{{route('cancel',$reservation->id)}}"></a>
                     </header>
                     <table class="reservation_table">
-                    <form class="form" action="{{route('update',$reservation->id)}}" method="post">
+                    <form class="form" action="{{route('myPageUpdate',$reservation->id)}}" method="post">
                         @csrf
                         <tr>
                             <th class="confirm_title">Shop</th>
@@ -85,7 +85,10 @@
                     </form>
                     </table>
                 </div>
-                @endforeach
+                <?php
+            $i++;
+            endforeach;
+            ?>
             </div>
             <div class="nices">
                 <div class="shop_all">
