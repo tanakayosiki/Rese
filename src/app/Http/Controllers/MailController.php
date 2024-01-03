@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use App\Models\User;
+use App\Models\Reservation;
 
 class MailController extends Controller
 {
@@ -17,5 +18,10 @@ class MailController extends Controller
         Mail::to($to)->send(new SendMail());
     }
         return back()->with('message','送信しました');
+    }
+
+    public function qrCode($id){
+        $reservation=Reservation::find($id);
+        return view('qr_code',compact('reservation'));
     }
 }
