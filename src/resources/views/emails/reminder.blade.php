@@ -5,4 +5,4 @@
 <p>ご予約人数:{{$reservation->person->getPerson()}}</p>
 
 <p>来店された際にこちらのQRコードをスタッフにご提示ください</p>
-{!! QrCode::generate('https://www.example.com') !!}
+{!! QrCode::generate(route('qrCode',$reservation->id)) !!}
