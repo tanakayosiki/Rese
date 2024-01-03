@@ -80,5 +80,6 @@ Route::post('email/verification-notification', [EmailVerificationNotificationCon
 
 Route::put('/admin/{id}/attach', [AdminController::class,'attach'])->name('attach');
 Route::put('/admin/{id}/detach', [AdminController::class,'detach'])->name('detach');
+Route::get('/reservation/mail/{id}',[MailController::class,'qrCode'])->name('qrCode');
 
 
