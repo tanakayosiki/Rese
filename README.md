@@ -54,10 +54,11 @@ DB_USERNAME=laravel_user
 DB_PASSWORD=laravel_pass  
 6.ユーザー登録後、管理者に設定  
 <img width="789" alt="スクリーンショット 2024-01-08 20 50 36" src="https://github.com/tanakayosiki/Rese/assets/135409428/feed033c-14cc-421a-8b26-6a7fd319bc62">
-画像の左上のサイトのタイトルであるReseの横にある四角のアイコンをクリックすると  
+上記の画像の左上のサイトのタイトルであるReseの横にある四角のアイコンをクリックすると  
 <img width="777" alt="スクリーンショット 2024-01-08 21 01 02" src="https://github.com/tanakayosiki/Rese/assets/135409428/3e7b1f1b-4613-484d-b7bc-fa661d39cbb2">
 が表示されるので、Registrationをクリックしていただくと会員登録画面に移りますので、登録を登録をお願いいたします。
-その後、http://localhost:8080/に入り、role_userをクリックすると、以下の画像のように表示されるので  
+その後、http://localhost:8080/  
+に入り、role_userをクリックすると、以下の画像のように表示されるので  
 <img width="815" alt="スクリーンショット 2024-01-08 21 18 24" src="https://github.com/tanakayosiki/Rese/assets/135409428/6100862f-8d36-4533-a94e-140a73a42b78">
 role_idの3をダブルクリックしてください。以下の画像のように表示されますので、1のadminをクリックしていただくと管理者用のページに入ることができます。  
 <img width="815" alt="スクリーンショット 2024-01-08 21 22 52" src="https://github.com/tanakayosiki/Rese/assets/135409428/5ea9f4c7-6927-437a-b1db-e72fbe7d0762">
