@@ -48,12 +48,12 @@ $ composer install
 $ cp .env.example .env
 $ exit  
 .envファイル内  
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=laravel_db
-DB_USERNAME=laravel_user
-DB_PASSWORD=laravel_pass  
+DB_CONNECTION=mysql  
+DB_HOST=mysql  
+DB_PORT=3306  
+DB_DATABASE=laravel_db  
+DB_USERNAME=laravel_user  
+DB_PASSWORD=laravel_pass    
 6.ユーザー登録後、管理者に設定  
 <img width="789" alt="スクリーンショット 2024-01-08 20 50 36" src="https://github.com/tanakayosiki/Rese/assets/135409428/feed033c-14cc-421a-8b26-6a7fd319bc62">
 上記の画像の左上のサイトのタイトルであるReseの横にある四角のアイコンをクリックすると  
