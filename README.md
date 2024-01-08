@@ -60,7 +60,7 @@ DB_PASSWORD=laravel_pass
 その後、http://localhost:8080/  
 に入り、role_userをクリックすると、以下の画像のように表示されるので  
 <img width="815" alt="スクリーンショット 2024-01-08 21 18 24" src="https://github.com/tanakayosiki/Rese/assets/135409428/6100862f-8d36-4533-a94e-140a73a42b78">
-role_idの3をダブルクリックしてください。以下の画像のように表示されますので、1のadminをクリックしていただくと管理者用のページに入ることができます。  
+role_idの3をダブルクリックしてください。以下の画像のように表示されますので、1のadminをクリックしていただくと管理者の設定完了です。  
 <img width="815" alt="スクリーンショット 2024-01-08 21 22 52" src="https://github.com/tanakayosiki/Rese/assets/135409428/5ea9f4c7-6927-437a-b1db-e72fbe7d0762">
 
 ## ER図
