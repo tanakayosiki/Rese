@@ -28,8 +28,9 @@
         <div class="user">
             <p class="name">{{$user['name']}}さん</p>
         </div>
-        <div class="content">
+            <div class="content">
             <div class="reservations">
+                <h1 class="reservation_title">予約状況</h1>
                 <?php $i=1; foreach($reservations as $reservation):?>
                 <div class="reservation_confirm">
                     <header class="content_header">
@@ -83,6 +84,20 @@
                         </tr>
                         </td>
                     </form>
+                    <form action="{{ route('pay') }}" method="POST">
+                        @csrf
+                        <script
+                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="{{ config('stripe.stripe_key') }}"
+                                data-amount="100"
+                                data-name="Stripe決済デモ"
+                                data-label="決済する"
+                                data-description="決済情報を入力してください"
+                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                data-locale="auto"
+                                data-currency="JPY">
+                        </script>
+                    </form>
                     </table>
                 </div>
                 <?php
@@ -91,6 +106,7 @@
             ?>
             </div>
             <div class="nices">
+                <h1 class="nice_title">お気に入り店舗</h1>
                 <div class="shop_all">
                         @foreach($nices as $nice)
                         <div class="shop">
