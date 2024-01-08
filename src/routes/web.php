@@ -14,6 +14,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\StripeController;
 
 
 /*
@@ -30,7 +31,7 @@ use App\Http\Controllers\MailController;
 Route::get('/',[ShopController::class,'index']);
 Route::middleware('auth')->group(function () {
     Route::get('/menu',[MenuController::class,'menu']);
-    Route::get('/detail/{id}',[ReservationController::class,'detail'])->name('detail');
+    Route::get('/detail/{id}',[ReservationController::class,'detail'])->name('detail')->middleware('verified');
     Route::post('/reservation/{id}',[ReservationController::class,'reservation'])->name('reservation');
     Route::get('/done',[ReservationController::class,'done']);
     Route::post('/detail/img_store/{id}',[ReservationController::class,'imgStore'])->name('imgStore');
@@ -44,12 +45,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/review/{id}',[ReviewController::class,'review'])->name('review');
     Route::get('/evaluation/{id}',[ReviewController::class,'evaluation'])->name('evaluation');
     Route::post('/evaluation',[ReviewController::class,'postEvaluation']);
+    Route::post('/charge', [StripeController::class,'charge'])->name('pay');
 
     Route::middleware(['AdminMiddleware'])->group(function(){
     Route::get('/admin',[AdminController::class,'index']);
     Route::get('/admin/select',[AdminController::class,'select']);
     Route::put('/admin/{id}/select',[AdminController::class,'postSelect'])->name('select');
     Route::get('/admin/mail',[MailController::class,'send']);
+    Route::put('/admin/{id}/attach', [AdminController::class,'attach'])->name('attach');
+    Route::put('/admin/{id}/detach', [AdminController::class,'detach'])->name('detach');
     });
 
     Route::middleware(['ManagerMiddleware'])->group(function(){
@@ -77,9 +81,6 @@ Route::post('email/verification-notification', [EmailVerificationNotificationCon
                 ->middleware('throttle:6,1')
                 ->name('verification.send');
 
-
-Route::put('/admin/{id}/attach', [AdminController::class,'attach'])->name('attach');
-Route::put('/admin/{id}/detach', [AdminController::class,'detach'])->name('detach');
 Route::get('/reservation/mail/{id}',[MailController::class,'qrCode'])->name('qrCode');
 
 
