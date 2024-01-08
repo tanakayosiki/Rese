@@ -47,7 +47,7 @@ $ composer install
 5..env ファイルの作成  
 $ cp .env.example .env
 $ exit  
-.envファイル内
+.envファイル内  
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
